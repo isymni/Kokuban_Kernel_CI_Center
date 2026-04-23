@@ -26,7 +26,7 @@
     ],
     "lto": "none",
     "anykernel_config": "canoe",
-    "zip_name_prefix": "Mi17_Kernel",
+    "zip_name_prefix": "Mi_sm8850_Kernel",
     "susfs": {
       "repo": "https://gitlab.com/simonpunk/susfs4ksu.git",
       "branch": "gki-android16-6.12",
