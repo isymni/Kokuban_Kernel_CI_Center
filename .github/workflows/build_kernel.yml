@@ -179,6 +179,13 @@ jobs:
           ARGS+=("--apply-bbg" "${{ env.APPLY_BBG }}")
           ./kokuban_ci_core build "${ARGS[@]}"
 
+      - name: Save defconfig for debugging
+  if: always()
+  uses: actions/upload-artifact@v7
+  with:
+    name: defconfig-${{ env.PROJECT }}-${{ github.run_id }}
+    path: kernel_source/out/.config
+
       - name: Collect Build Artifacts
         if: always()
         id: collect-artifacts
