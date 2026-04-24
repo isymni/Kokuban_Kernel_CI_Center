@@ -184,7 +184,7 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
          name: defconfig-${{ env.PROJECT }}-${{ github.run_id }}
-         path: kernel_source/out/.config
+         path: kernel_source/.config
     
       - name: Collect Build Artifacts
         if: always()
